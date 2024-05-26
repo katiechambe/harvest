@@ -12,16 +12,25 @@ class SetupPaths:
         basedir=""
         ):
 
+        err_str = "No base directory specified. Please specify path to harvest base directory i.e. SetupPaths(/Users/name/Documents/harvest)"
+            
         try:
             if basedir == "":
-                raise OSError
+                raise OSError(err_str)
         except OSError:
-            print("Please specify path to harvest base directory."
-            print("i.e. SetupPaths(/Users/name/Documents/harvest")
+            raise
         
         self.path_basedir = basedir
-        # self.path_home = self.path_basedir # + "katie/" 
-        # self.path_pears = self.path_home + "pears/"
+        
+        self.path_data = self.path_basedir + "/data/"
+        self.path_pairs = self.path_data + "pairs/"
+        self.path_orbits = self.path_data + "orbits/"
+        self.path_misc = self.path_data + "misc/"
+
+    def tng(self, tng_path):
+        self.tng_base = tng_path
+        self.tng_trees = self.tng_base + "postprocessing/"
+        # self.tng_trees = self.tng_base + "postprocessing/"
 
         # # directories for illustris data
         # self.path_illustris = self.path_basedir + "Illustris/"
@@ -41,18 +50,3 @@ class SetupPaths:
         # self.path_tngmatch_N = self.path_illustristng + "TNG100-Matched-Nelson/subhalo_matching_to_dark.hdf5"
       
 
-        # # pears directories
-        # self.path_data = self.path_pears + "data/"
-        # self.path_groups = self.path_data + "groups/"
-        # self.path_subhalos = self.path_data + "subhalos/"
-        # self.path_maxmass = self.path_data + "max_masses/"
-        # self.path_am_mass = self.path_data + "am_masses/"
-        # self.path_snapdata = self.path_data + "snapdata/"
-        # self.path_pairs = self.path_data + "pairs/"
-        # self.path_median = self.path_data + "median_realization/"
-        # self.path_simstars = self.path_data + "simulation_mstar/"
-        
-        # # pears paper and plots
-        # self.path_plots = self.path_pears + "plots/paper1/"
-        # self.path_plotdata = self.path_plots + "plotdata/"
-        # self.path_paper = self.path_pears + "pears/"
