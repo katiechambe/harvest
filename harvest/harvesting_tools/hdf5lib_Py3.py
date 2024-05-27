@@ -33,11 +33,12 @@
 #
 # Mark Vogelsberger (mvogelsb@cfa.harvard.edu)
 import sys
-import hdf5lib_param
+# import hdf5lib_param # KC removed in 2024 and just set hdf5libname to h5py
 
 #try:
 if True:
-    hdf5libname = hdf5lib_param.libname
+    # hdf5libname = hdf5lib_param.libname
+    hdf5libname = "h5py"
     if hdf5libname == "tables":
         import tables
         use_tables=True
