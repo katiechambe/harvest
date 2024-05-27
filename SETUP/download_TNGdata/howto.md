@@ -1,3 +1,10 @@
+This folder contains a few bash scripts that I found helpful when downloading the IllustrisTNG data. 
+Alternatively, it can be copied from the rental storage, where it is found as TNG100-1. 
+
+A more comprehensive and robust explanation of data downloading can be found at the [(TNG Website)](https://www.tng-project.org/data/docs/scripts/)
+
+--- 
+
 File structure for working with data:
 
 ```
@@ -12,22 +19,8 @@ IllustrisTNG/ (parent directory)
 |   ├── tree_extended.**.hdf5
 |
 ├── trees/
+|   ├── tree_extended.**.hdf5
 
-
-
-- output/ (contains group catalogs)
-    - groups_000
-    - ...
-    - groups_099
- 
-- 
-    - offsets/
-        - offsets_000.hdf5
-        - ...
-        - offsets_099.hdf5
-
-- trees/
 ```
 
 
-https://www.tng-project.org/data/docs/scripts/
