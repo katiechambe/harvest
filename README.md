@@ -1,7 +1,6 @@
-# harvesting
 Tools to collect and analyze TNG galaxy/subhalo pairs. 
 
-## Instructions for download and set-up
+# Instructions for download and set-up
 
 Step 1:
 -------
@@ -39,7 +38,7 @@ Step 4:
 -------
 Start a Jupyter Notebook session in the harvest/ directory and any of it's parent directories, and get started with the first example notebook in ```example-notebooks/``` 
 
-## Directories
+# Directories
 ```
 ------------
 - harvest
